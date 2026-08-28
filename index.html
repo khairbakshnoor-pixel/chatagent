@@ -52,6 +52,9 @@
         a[href*="retellai.com"]::before {
           display: none !important;
         }
+        div:has(> a[href*="retellai.com"]) {
+          display: none !important;
+        }
       `;
       shadowRoot.appendChild(style);
       shadowRoot.querySelector('a[href*="retellai.com"]')?.parentElement.style.setProperty('display', 'none', 'important');
